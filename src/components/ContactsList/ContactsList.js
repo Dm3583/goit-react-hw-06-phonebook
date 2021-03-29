@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import contactsActions from '../../redux/phonebook/phonebook-actions';
+import contactsActions from '../../redux/phonebook/contacts-actions';
 import ListItem from './ListItem';
 import PropTypes from 'prop-types';
 import './ContactsList.scss';

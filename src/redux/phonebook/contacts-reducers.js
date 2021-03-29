@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import types from './phonedook-types';
+import types from './contacts-types';
 
 const items = (state = [], { type, payload }) => {
   switch (type) {

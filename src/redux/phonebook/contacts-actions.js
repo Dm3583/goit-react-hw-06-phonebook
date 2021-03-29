@@ -1,4 +1,4 @@
-import types from './phonedook-types';
+import types from './contacts-types';
 
 const addContact = contact => ({
   type: types.ADD,

@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import contactsReducer from './phonebook/phonebook-reducers';
+import contactsReducer from './phonebook/contacts-reducers';
 
 const rootReducer = combineReducers({
   contacts: contactsReducer,

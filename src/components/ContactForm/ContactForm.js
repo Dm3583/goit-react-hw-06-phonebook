@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import contactActions from '../../redux/phonebook/phonebook-actions';
+import contactActions from '../../redux/phonebook/contacts-actions';
 import { v4 as uuid } from 'uuid';
 import PropTypes from 'prop-types';
 import './ContactForm.scss';
