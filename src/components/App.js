@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ContactForm from './ContactForm';
 import Filter from './Filter';
 import ContactsList from './ContactsList';
@@ -14,32 +14,14 @@ import ContactsList from './ContactsList';
 // );
 // localStorage.removeItem('contacts')
 
-class App extends Component {
-  // componentDidMount() {
-  //   const contactsInitial = JSON.parse(localStorage.getItem('contacts'));
-  //   if (contactsInitial) {
-  //     this.setState({ contacts: contactsInitial });
-  //   }
-  // };
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   const { contacts } = this.state;
-  //   if (contacts !== prevState.contacts) {
-  //     localStorage.setItem('contacts', JSON.stringify(contacts));
-  //   }
-  // };
-
-  render() {
-    return (
-      <div>
-        <h1>Phonebook</h1>
-        <ContactForm />
-        <Filter />
-        <h2>Contacts</h2>
-        <ContactsList />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <div>
+    <h1>Phonebook</h1>
+    <ContactForm />
+    <Filter />
+    <h2>Contacts</h2>
+    <ContactsList />
+  </div>
+);
 
 export default App;
