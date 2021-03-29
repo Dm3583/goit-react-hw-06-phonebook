@@ -38,22 +38,6 @@ class App extends Component {
     this.setState({ [stateField]: e.target.value });
   };
 
-  // addContact = contact => {
-  //   const { name } = contact;
-  //   if (this.state.contacts.find(contact => contact.name === name)) {
-  //     alert(`${name} is already in contacts`);
-  //   } else {
-  //     this.setState(({ contacts }) => ({ contacts: [...contacts, contact] }));
-  //   }
-  // };
-
-  // deleteContact = contactID => {
-  //   const { contacts } = this.state;
-  //   this.setState({
-  //     contacts: contacts.filter(contact => contact.id !== contactID),
-  //   });
-  // };
-
   filteredContacts = () => {
     const { contacts, filter } = this.state;
     const filterNormalize = filter.toLowerCase();
@@ -63,8 +47,6 @@ class App extends Component {
   };
 
   render() {
-    // const { handleInput, addContact, filteredContacts, deleteContact } = this;
-    // const visibleContacts = filteredContacts();
     return (
       <div>
         <h1>Phonebook</h1>

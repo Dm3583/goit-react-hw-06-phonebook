@@ -28,8 +28,15 @@ ContactsList.propTypes = {
   deleteContact: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
-  contacts: state.contacts.items,
+const getFilteredContacts = (allContacts, filter) => {
+  const normalizedFilter = filter.toLowerCase();
+  return allContacts.filter(({ name }) =>
+    name.toLowerCase.includes(normalizedFilter),
+  );
+};
+
+const mapStateToProps = ({ contacts: { items, filter } }) => ({
+  contacts: getFilteredContacts(items, filter),
 });
 
 const mapDispatchToProps = dispatch => ({
