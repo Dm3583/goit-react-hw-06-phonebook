@@ -30,9 +30,13 @@ ContactsList.propTypes = {
 
 const getFilteredContacts = (allContacts, filter) => {
   const normalizedFilter = filter.toLowerCase();
-  return allContacts.filter(({ name }) =>
-    name.toLowerCase.includes(normalizedFilter),
-  );
+  if (allContacts.length > 0) {
+    return allContacts.filter(({ name }) =>
+      name.toLowerCase().includes(normalizedFilter),
+    );
+  } else {
+    return allContacts;
+  }
 };
 
 const mapStateToProps = ({ contacts: { items, filter } }) => ({

@@ -21,7 +21,7 @@ const Filter = ({ value, onChange }) => {
 
 Filter.propTypes = {
   value: PropTypes.string,
-  handleInput: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
