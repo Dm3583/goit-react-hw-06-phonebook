@@ -1,8 +1,7 @@
 import { createAction } from '@reduxjs/toolkit';
-import types from './contacts-types';
 
-const addContact = createAction(types.ADD);
-const deleteContact = createAction(types.DELETE);
-const changeFilter = createAction(types.CHANGE_FILTER);
+const addContact = createAction('contacts/add');
+const deleteContact = createAction('contacts/delete');
+const changeFilter = createAction('contacts/changeFilter');
 
 export default { addContact, deleteContact, changeFilter };
