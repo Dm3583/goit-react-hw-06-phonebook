@@ -5,7 +5,9 @@ const items = (state = [], { type, payload }) => {
   switch (type) {
     case types.ADD:
       const { name } = payload;
-      if (state.find(contact => contact.name === name)) {
+      if (
+        state.find(contact => contact.name.toLowerCase() === name.toLowerCase())
+      ) {
         alert(`${name} is already in contacts`);
         return state;
       } else {
