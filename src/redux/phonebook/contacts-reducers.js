@@ -4,10 +4,9 @@ import actions from './contacts-actions';
 
 const addContact = (contactsList, contactToAdd) => {
   const { name } = contactToAdd;
+  const normalizedName = name.toLowerCase();
   if (
-    contactsList.find(
-      contact => contact.name.toLowerCase() === name.toLowerCase(),
-    )
+    contactsList.find(contact => contact.name.toLowerCase() === normalizedName)
   ) {
     alert(`${name} is already in contacts`);
     return contactsList;
